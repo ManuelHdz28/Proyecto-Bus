@@ -622,7 +622,7 @@ public class formulario extends javax.swing.JFrame {
          lblTotalPagar.setText("$0.0");
         asiento = "| ";
         validador = 0;
-         contador.setText(String.valueOf(validador));
+        
         }else{
           JOptionPane.showMessageDialog(null, "SELECCIONE ALGUNO DE LOS ASIENTOS");
         }
