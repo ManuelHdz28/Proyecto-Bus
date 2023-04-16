@@ -537,7 +537,7 @@ public class formulario extends javax.swing.JFrame {
             asiento16.setEnabled(false);
         }
         
-        //JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
+        JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
         
         pago = 0;
         lblTotalPagar.setText("$0.0");
