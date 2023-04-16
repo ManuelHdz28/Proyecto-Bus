@@ -299,10 +299,12 @@ public class formulario extends javax.swing.JFrame {
         lblCaja.setText("$0.0");
 
         jButton2.setBackground(new java.awt.Color(0, 102, 0));
+        jButton2.setEnabled(false);
 
         jLabel3.setText("DISPONIBLE");
 
         jButton3.setBackground(new java.awt.Color(255, 0, 0));
+        jButton3.setEnabled(false);
 
         jLabel4.setText("OCUPADO");
 
