@@ -67,6 +67,7 @@ public class formulario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        contador = new javax.swing.JLabel();
 
         jButton9.setText("jButton1");
 
@@ -308,6 +309,8 @@ public class formulario extends javax.swing.JFrame {
 
         jLabel4.setText("OCUPADO");
 
+        contador.setText("jLabel5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -375,15 +378,22 @@ public class formulario extends javax.swing.JFrame {
                 .addGap(31, 31, 31))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tema)
-                .addGap(241, 241, 241))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(tema)
+                        .addGap(241, 241, 241))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(contador)
+                        .addGap(67, 67, 67))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tema)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGap(13, 13, 13)
+                .addComponent(contador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(asiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -442,7 +452,7 @@ public class formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void asiento7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento7ActionPerformed
-       asiento = asiento + asiento7.getText() + " | ";
+       
         if(color7 == true){
            pago = pago + 1;
             asiento7.setBackground(Color.red);
@@ -459,7 +469,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento7ActionPerformed
 
     private void asiento11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento11ActionPerformed
-        asiento = asiento + asiento11.getText() + " | ";
+        
         
        if(color11 == true){
            pago = pago + 1;
@@ -501,7 +511,8 @@ public class formulario extends javax.swing.JFrame {
     private void reservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reservarActionPerformed
         caja = caja + pago;
         lblCaja.setText(String.valueOf("$" + caja));
-        
+        asiento = "| ";
+        validador = 0;
         if(color1 == false){
             asiento1.setEnabled(false);
             asiento = asiento + asiento1.getText() + " | ";
@@ -515,82 +526,97 @@ public class formulario extends javax.swing.JFrame {
         }
         
         if(color3 == false){
-            
+            asiento = asiento + asiento3.getText() + " | ";
             asiento3.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color4 == false){
-            
+            asiento = asiento + asiento4.getText() + " | ";
             asiento4.setEnabled(false);
             validador = validador + 1;
         }
         if(color5 == false){
+            asiento = asiento + asiento5.getText() + " | ";
             asiento5.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color6 == false){
+            asiento = asiento + asiento6.getText() + " | ";
             asiento6.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color7 == false){
+            asiento = asiento + asiento7.getText() + " | ";
             asiento7.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color8 == false){
+            asiento = asiento + asiento8.getText() + " | ";
             asiento8.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color9 == false){
+            asiento = asiento + asiento9.getText() + " | ";
             asiento9.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color10 == false){
+            asiento = asiento + asiento10.getText() + " | ";
             asiento10.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color11 == false){
+            asiento = asiento + asiento11.getText() + " | ";
             asiento11.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color12 == false){
+            asiento = asiento + asiento12.getText() + " | ";
             asiento12.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color13 == false){
+            asiento = asiento + asiento13.getText() + " | ";
             asiento13.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color14 == false){
+            asiento = asiento + asiento14.getText() + " | ";
             asiento14.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color15 == false){
+            asiento = asiento + asiento15.getText() + " | ";
             asiento15.setEnabled(false);
             validador = validador + 1;
         }
         
         if(color16 == false){
+            asiento = asiento + asiento16.getText() + " | ";
             asiento16.setEnabled(false);
             validador = validador + 1;
         }
         
         if(validador >0){
          JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
+          
          txtaHistorial.append("Ticket de Compra\r\nAsientos Reservados: " + asiento + "\r\nTotal a pagar: $" + pago + "\r\n -------------------------------------\r\n");
          pago = 0;
          lblTotalPagar.setText("$0.0");
          asiento = "| ";
+         validador = 0;
+         
         }else{
           JOptionPane.showMessageDialog(null, "SELECCIONE ALGUNO DE LOS ASIENTOS");
         }
@@ -618,7 +644,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento2ActionPerformed
 
     private void asiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento3ActionPerformed
-         asiento = asiento + asiento3.getText() + " | ";
+        
         
        if(color3 == true){
            pago = pago + 1;
@@ -636,8 +662,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento3ActionPerformed
 
     private void asiento4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento4ActionPerformed
-         asiento = asiento + asiento4.getText() + " | ";
-        
+         
        if(color4 == true){
            pago = pago + 1;
             asiento4.setBackground(Color.red);
@@ -654,8 +679,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento4ActionPerformed
 
     private void asiento5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento5ActionPerformed
-         asiento = asiento + asiento5.getText() + " | ";
-        
+     
        if(color5 == true){
            pago = pago + 1;
             asiento5.setBackground(Color.red);
@@ -672,8 +696,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento5ActionPerformed
 
     private void asiento6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento6ActionPerformed
-         asiento = asiento + asiento6.getText() + " | ";
-        
+       
        if(color6 == true){
            pago = pago + 1;
             asiento6.setBackground(Color.red);
@@ -690,8 +713,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento6ActionPerformed
 
     private void asiento8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento8ActionPerformed
-        asiento = asiento + asiento8.getText() + " | ";
-        
+       
         if(color8 == true){
            pago = pago + 1;
             asiento8.setBackground(Color.red);
@@ -709,7 +731,6 @@ public class formulario extends javax.swing.JFrame {
 
     private void asiento9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento9ActionPerformed
         
-        asiento = asiento + asiento9.getText() + " | ";
         if(color9 == true){
            pago = pago + 1;
             asiento9.setBackground(Color.red);
@@ -726,8 +747,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento9ActionPerformed
 
     private void asiento10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento10ActionPerformed
-        asiento = asiento + asiento10.getText() + " | ";
-        
+      
         if(color10 == true){
            pago = pago + 1;
             asiento10.setBackground(Color.red);
@@ -744,8 +764,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento10ActionPerformed
 
     private void asiento12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento12ActionPerformed
-         asiento = asiento + asiento12.getText() + " | ";
-        
+       
        if(color12 == true){
            pago = pago + 1;
             asiento12.setBackground(Color.red);
@@ -762,7 +781,6 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento12ActionPerformed
 
     private void asiento13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento13ActionPerformed
-        asiento = asiento + asiento13.getText() + " | ";
         
        if(color13 == true){
            pago = pago + 1;
@@ -780,8 +798,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento13ActionPerformed
 
     private void asiento14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento14ActionPerformed
-         asiento = asiento + asiento14.getText() + " | ";
-        
+         
        if(color14 == true){
            pago = pago + 1;
             asiento14.setBackground(Color.red);
@@ -798,8 +815,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento14ActionPerformed
 
     private void asiento15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento15ActionPerformed
-         asiento = asiento + asiento15.getText() + " | ";
-        
+       
        if(color15 == true){
            pago = pago + 1;
             asiento15.setBackground(Color.red);
@@ -816,7 +832,6 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento15ActionPerformed
 
     private void asiento16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento16ActionPerformed
-        asiento = asiento + asiento16.getText() + " | ";
         
        if(color16 == true){
            pago = pago + 1;
@@ -888,6 +903,7 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JButton asiento7;
     private javax.swing.JButton asiento8;
     private javax.swing.JButton asiento9;
+    private javax.swing.JLabel contador;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton9;
