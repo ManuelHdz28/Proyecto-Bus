@@ -17,7 +17,7 @@ public class formulario extends javax.swing.JFrame {
     boolean color1 = true, color2 = true, color3 = true, color4 = true, color5 = true, color6 = true, color7 = true, color8 = true, color9 = true, color10 = true, color11 = true, color12 = true, color13 = true, color14 = true, color15 = true, color16 = true;
     
     double pago = 0, caja = 0;
-    String asiento = "";
+    String asiento = "| ";
     
     /**
      * Creates new form formulario
@@ -63,6 +63,10 @@ public class formulario extends javax.swing.JFrame {
         lblCostoAsiento = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblCaja = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         jButton9.setText("jButton1");
 
@@ -294,6 +298,14 @@ public class formulario extends javax.swing.JFrame {
 
         lblCaja.setText("$0.0");
 
+        jButton2.setBackground(new java.awt.Color(0, 102, 0));
+
+        jLabel3.setText("DISPONIBLE");
+
+        jButton3.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel4.setText("OCUPADO");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -329,26 +341,36 @@ public class formulario extends javax.swing.JFrame {
                         .addComponent(asiento3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(asiento4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(reservar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(143, 143, 143))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblMensajeTotalaPagar)
-                                .addGap(26, 26, 26)
-                                .addComponent(lblTotalPagar))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1)
                             .addComponent(lblCostoAsiento)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblCaja)
-                                .addGap(8, 8, 8)))
-                        .addGap(31, 31, 31))))
+                                .addGap(8, 8, 8))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(reservar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblMensajeTotalaPagar)
+                                    .addGap(26, 26, 26)
+                                    .addComponent(lblTotalPagar)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jLabel4)
+                        .addGap(3, 3, 3)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel3)
+                        .addGap(4, 4, 4)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(31, 31, 31))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(tema)
@@ -359,63 +381,66 @@ public class formulario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tema)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(asiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(asiento5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(asiento9, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(asiento13, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(asiento2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(asiento6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(asiento10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento12, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(asiento14, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento15, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(asiento16, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(asiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(asiento5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(asiento9, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(asiento13, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(asiento2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(asiento6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(asiento10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento12, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(asiento14, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento15, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(asiento16, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lblCostoAsiento)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblMensajeTotalaPagar)
                             .addComponent(lblTotalPagar))
-                        .addGap(26, 26, 26)
+                        .addGap(18, 18, 18)
                         .addComponent(reservar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
+                        .addGap(30, 30, 30)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(lblCaja))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void asiento7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento7ActionPerformed
-       asiento = asiento + asiento7.getText() + " ";
+       asiento = asiento + asiento7.getText() + " | ";
         if(color7 == true){
            pago = pago + 1;
             asiento7.setBackground(Color.red);
@@ -432,7 +457,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento7ActionPerformed
 
     private void asiento11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento11ActionPerformed
-        asiento = asiento + asiento11.getText() + " ";
+        asiento = asiento + asiento11.getText() + " | ";
         
        if(color11 == true){
            pago = pago + 1;
@@ -452,7 +477,7 @@ public class formulario extends javax.swing.JFrame {
 
     private void asiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento1ActionPerformed
       
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento1.getText() + " | ";
         
        if(color1 == true){
            
@@ -546,12 +571,12 @@ public class formulario extends javax.swing.JFrame {
         //txtaHistorial.setText("----------------------------------");
         pago = 0;
         lblTotalPagar.setText("$0.0");
-        asiento = "";
+        asiento = "| ";
     }//GEN-LAST:event_reservarActionPerformed
 
     private void asiento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento2ActionPerformed
        
-        asiento = asiento + asiento2.getText() + " ";
+        asiento = asiento + asiento2.getText() + " | ";
         
        if(color2 == true){
            pago = pago + 1;
@@ -569,7 +594,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento2ActionPerformed
 
     private void asiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento3ActionPerformed
-         asiento = asiento + asiento3.getText() + " ";
+         asiento = asiento + asiento3.getText() + " | ";
         
        if(color3 == true){
            pago = pago + 1;
@@ -587,7 +612,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento3ActionPerformed
 
     private void asiento4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento4ActionPerformed
-         asiento = asiento + asiento4.getText() + " ";
+         asiento = asiento + asiento4.getText() + " | ";
         
        if(color4 == true){
            pago = pago + 1;
@@ -605,7 +630,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento4ActionPerformed
 
     private void asiento5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento5ActionPerformed
-         asiento = asiento + asiento5.getText() + " ";
+         asiento = asiento + asiento5.getText() + " | ";
         
        if(color5 == true){
            pago = pago + 1;
@@ -623,7 +648,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento5ActionPerformed
 
     private void asiento6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento6ActionPerformed
-         asiento = asiento + asiento6.getText() + " ";
+         asiento = asiento + asiento6.getText() + " | ";
         
        if(color6 == true){
            pago = pago + 1;
@@ -641,7 +666,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento6ActionPerformed
 
     private void asiento8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento8ActionPerformed
-        asiento = asiento + asiento8.getText() + " ";
+        asiento = asiento + asiento8.getText() + " | ";
         
         if(color8 == true){
            pago = pago + 1;
@@ -660,7 +685,7 @@ public class formulario extends javax.swing.JFrame {
 
     private void asiento9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento9ActionPerformed
         
-        asiento = asiento + asiento9.getText() + " ";
+        asiento = asiento + asiento9.getText() + " | ";
         if(color9 == true){
            pago = pago + 1;
             asiento9.setBackground(Color.red);
@@ -677,7 +702,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento9ActionPerformed
 
     private void asiento10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento10ActionPerformed
-        asiento = asiento + asiento10.getText() + " ";
+        asiento = asiento + asiento10.getText() + " | ";
         
         if(color10 == true){
            pago = pago + 1;
@@ -695,7 +720,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento10ActionPerformed
 
     private void asiento12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento12ActionPerformed
-         asiento = asiento + asiento12.getText() + " ";
+         asiento = asiento + asiento12.getText() + " | ";
         
        if(color12 == true){
            pago = pago + 1;
@@ -713,7 +738,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento12ActionPerformed
 
     private void asiento13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento13ActionPerformed
-        asiento = asiento + asiento13.getText() + " ";
+        asiento = asiento + asiento13.getText() + " | ";
         
        if(color13 == true){
            pago = pago + 1;
@@ -731,7 +756,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento13ActionPerformed
 
     private void asiento14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento14ActionPerformed
-         asiento = asiento + asiento14.getText() + " ";
+         asiento = asiento + asiento14.getText() + " | ";
         
        if(color14 == true){
            pago = pago + 1;
@@ -749,7 +774,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento14ActionPerformed
 
     private void asiento15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento15ActionPerformed
-         asiento = asiento + asiento15.getText() + " ";
+         asiento = asiento + asiento15.getText() + " | ";
         
        if(color15 == true){
            pago = pago + 1;
@@ -767,7 +792,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento15ActionPerformed
 
     private void asiento16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento16ActionPerformed
-        asiento = asiento + asiento16.getText() + " ";
+        asiento = asiento + asiento16.getText() + " | ";
         
        if(color16 == true){
            pago = pago + 1;
@@ -839,9 +864,13 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JButton asiento7;
     private javax.swing.JButton asiento8;
     private javax.swing.JButton asiento9;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCaja;
     private javax.swing.JLabel lblCostoAsiento;
