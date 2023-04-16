@@ -6,6 +6,7 @@ package bus_interfaz;
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -499,6 +500,45 @@ public class formulario extends javax.swing.JFrame {
         if(color7 == false){
             asiento7.setEnabled(false);
         }
+        
+        if(color8 == false){
+            asiento8.setEnabled(false);
+        }
+        
+        if(color9 == false){
+            asiento9.setEnabled(false);
+        }
+        
+        if(color10 == false){
+            asiento10.setEnabled(false);
+        }
+        
+        if(color11 == false){
+            asiento11.setEnabled(false);
+        }
+        
+        if(color12 == false){
+            asiento12.setEnabled(false);
+        }
+        
+        if(color13 == false){
+            asiento13.setEnabled(false);
+        }
+        
+        if(color14 == false){
+            asiento14.setEnabled(false);
+        }
+        
+        if(color15 == false){
+            asiento15.setEnabled(false);
+        }
+        
+        if(color16 == false){
+            asiento16.setEnabled(false);
+        }
+        
+        //JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
+        
         pago = 0;
         lblTotalPagar.setText("$0.0");
     }//GEN-LAST:event_reservarActionPerformed
