@@ -381,6 +381,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento9ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="asiento10">
       <Properties>
@@ -401,6 +404,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento10ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="asiento12">
       <Properties>
@@ -421,6 +427,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento12ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="asiento11">
       <Properties>
@@ -464,6 +473,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento13ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="asiento14">
       <Properties>
@@ -484,6 +496,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento14ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="asiento15">
       <Properties>
@@ -504,6 +519,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento15ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="asiento16">
       <Properties>
@@ -524,6 +542,9 @@
           <Dimension value="[34, 10]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="asiento16ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="reservar">
       <Properties>

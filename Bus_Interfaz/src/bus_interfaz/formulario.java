@@ -169,6 +169,11 @@ public class formulario extends javax.swing.JFrame {
         asiento9.setText("09");
         agrupacion.add(asiento9);
         asiento9.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento9ActionPerformed(evt);
+            }
+        });
 
         asiento10.setBackground(new java.awt.Color(0, 102, 0));
         asiento10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -176,6 +181,11 @@ public class formulario extends javax.swing.JFrame {
         asiento10.setText("10");
         agrupacion.add(asiento10);
         asiento10.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento10ActionPerformed(evt);
+            }
+        });
 
         asiento12.setBackground(new java.awt.Color(0, 102, 0));
         asiento12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -183,6 +193,11 @@ public class formulario extends javax.swing.JFrame {
         asiento12.setText("12");
         agrupacion.add(asiento12);
         asiento12.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento12ActionPerformed(evt);
+            }
+        });
 
         asiento11.setBackground(new java.awt.Color(0, 102, 0));
         asiento11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -202,6 +217,11 @@ public class formulario extends javax.swing.JFrame {
         asiento13.setText("13");
         agrupacion.add(asiento13);
         asiento13.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento13ActionPerformed(evt);
+            }
+        });
 
         asiento14.setBackground(new java.awt.Color(0, 102, 0));
         asiento14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -209,6 +229,11 @@ public class formulario extends javax.swing.JFrame {
         asiento14.setText("14");
         agrupacion.add(asiento14);
         asiento14.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento14ActionPerformed(evt);
+            }
+        });
 
         asiento15.setBackground(new java.awt.Color(0, 102, 0));
         asiento15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -216,6 +241,11 @@ public class formulario extends javax.swing.JFrame {
         asiento15.setText("15");
         agrupacion.add(asiento15);
         asiento15.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento15ActionPerformed(evt);
+            }
+        });
 
         asiento16.setBackground(new java.awt.Color(0, 102, 0));
         asiento16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -223,6 +253,11 @@ public class formulario extends javax.swing.JFrame {
         asiento16.setText("16");
         agrupacion.add(asiento16);
         asiento16.setPreferredSize(new java.awt.Dimension(34, 10));
+        asiento16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asiento16ActionPerformed(evt);
+            }
+        });
 
         reservar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         reservar.setText("RESERVAR");
@@ -379,7 +414,8 @@ public class formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void asiento7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento7ActionPerformed
-       if(color7 == true){
+       asiento = asiento + asiento1.getText() + " ";
+        if(color7 == true){
            pago = pago + 1;
             asiento7.setBackground(Color.red);
             asiento7.setForeground(Color.white);
@@ -395,7 +431,22 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento7ActionPerformed
 
     private void asiento11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento11ActionPerformed
-        // TODO add your handling code here:
+        asiento = asiento + asiento1.getText() + " ";
+        
+       if(color11 == true){
+           pago = pago + 1;
+            asiento11.setBackground(Color.red);
+            asiento11.setForeground(Color.white);
+            color11 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento11.setBackground(new java.awt.Color(0,102,0));
+            asiento11.setForeground(Color.white);
+            color11 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+
     }//GEN-LAST:event_asiento11ActionPerformed
 
     private void asiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento1ActionPerformed
@@ -428,6 +479,25 @@ public class formulario extends javax.swing.JFrame {
         
         if(color2 == false){
             asiento2.setEnabled(false);
+        }
+        
+        if(color3 == false){
+            asiento3.setEnabled(false);
+        }
+        
+        if(color4 == false){
+            asiento4.setEnabled(false);
+        }
+        if(color5 == false){
+            asiento5.setEnabled(false);
+        }
+        
+        if(color6 == false){
+            asiento6.setEnabled(false);
+        }
+        
+        if(color7 == false){
+            asiento7.setEnabled(false);
         }
         pago = 0;
         lblTotalPagar.setText("$0.0");
@@ -525,6 +595,8 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento6ActionPerformed
 
     private void asiento8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento8ActionPerformed
+        asiento = asiento + asiento1.getText() + " ";
+        
         if(color8 == true){
            pago = pago + 1;
             asiento8.setBackground(Color.red);
@@ -539,6 +611,132 @@ public class formulario extends javax.swing.JFrame {
             lblTotalPagar.setText(String.valueOf("$"+pago));
        }
     }//GEN-LAST:event_asiento8ActionPerformed
+
+    private void asiento9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento9ActionPerformed
+        
+        asiento = asiento + asiento1.getText() + " ";
+        if(color9 == true){
+           pago = pago + 1;
+            asiento9.setBackground(Color.red);
+            asiento9.setForeground(Color.white);
+            color9 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento9.setBackground(new java.awt.Color(0,102,0));
+            asiento9.setForeground(Color.white);
+            color9 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento9ActionPerformed
+
+    private void asiento10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento10ActionPerformed
+        asiento = asiento + asiento1.getText() + " ";
+        
+        if(color10 == true){
+           pago = pago + 1;
+            asiento10.setBackground(Color.red);
+            asiento10.setForeground(Color.white);
+            color10 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento10.setBackground(new java.awt.Color(0,102,0));
+            asiento10.setForeground(Color.white);
+            color10 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento10ActionPerformed
+
+    private void asiento12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento12ActionPerformed
+         asiento = asiento + asiento1.getText() + " ";
+        
+       if(color12 == true){
+           pago = pago + 1;
+            asiento12.setBackground(Color.red);
+            asiento12.setForeground(Color.white);
+            color12 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento12.setBackground(new java.awt.Color(0,102,0));
+            asiento12.setForeground(Color.white);
+            color12 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento12ActionPerformed
+
+    private void asiento13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento13ActionPerformed
+        asiento = asiento + asiento1.getText() + " ";
+        
+       if(color13 == true){
+           pago = pago + 1;
+            asiento13.setBackground(Color.red);
+            asiento13.setForeground(Color.white);
+            color13 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento13.setBackground(new java.awt.Color(0,102,0));
+            asiento13.setForeground(Color.white);
+            color13 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento13ActionPerformed
+
+    private void asiento14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento14ActionPerformed
+         asiento = asiento + asiento1.getText() + " ";
+        
+       if(color14 == true){
+           pago = pago + 1;
+            asiento14.setBackground(Color.red);
+            asiento14.setForeground(Color.white);
+            color14 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento14.setBackground(new java.awt.Color(0,102,0));
+            asiento14.setForeground(Color.white);
+            color14 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento14ActionPerformed
+
+    private void asiento15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento15ActionPerformed
+         asiento = asiento + asiento1.getText() + " ";
+        
+       if(color15 == true){
+           pago = pago + 1;
+            asiento15.setBackground(Color.red);
+            asiento15.setForeground(Color.white);
+            color15 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento15.setBackground(new java.awt.Color(0,102,0));
+            asiento15.setForeground(Color.white);
+            color15 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento15ActionPerformed
+
+    private void asiento16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento16ActionPerformed
+        asiento = asiento + asiento1.getText() + " ";
+        
+       if(color16 == true){
+           pago = pago + 1;
+            asiento16.setBackground(Color.red);
+            asiento16.setForeground(Color.white);
+            color16 = false;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }else{
+            pago = pago - 1;
+            asiento16.setBackground(new java.awt.Color(0,102,0));
+            asiento16.setForeground(Color.white);
+            color16 = true;
+            lblTotalPagar.setText(String.valueOf("$"+pago));
+       }
+    }//GEN-LAST:event_asiento16ActionPerformed
     private void CambiarColor (){
          
     }
