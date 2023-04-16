@@ -17,7 +17,7 @@ public class formulario extends javax.swing.JFrame {
     boolean color1 = true, color2 = true, color3 = true, color4 = true, color5 = true, color6 = true, color7 = true, color8 = true, color9 = true, color10 = true, color11 = true, color12 = true, color13 = true, color14 = true, color15 = true, color16 = true;
     
     double pago = 0, caja = 0;
-    String asiento;
+    String asiento = "";
     
     /**
      * Creates new form formulario
@@ -56,7 +56,7 @@ public class formulario extends javax.swing.JFrame {
         reservar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtaHistorial = new javax.swing.JTextArea();
         lblMensajeTotalaPagar = new javax.swing.JLabel();
         tema = new javax.swing.JLabel();
         lblTotalPagar = new javax.swing.JLabel();
@@ -273,10 +273,10 @@ public class formulario extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel1.setText("HISTORIAL DE RESERVACIONES:");
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtaHistorial.setEditable(false);
+        txtaHistorial.setColumns(20);
+        txtaHistorial.setRows(5);
+        jScrollPane1.setViewportView(txtaHistorial);
 
         lblMensajeTotalaPagar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblMensajeTotalaPagar.setText("TOTAL A PAGAR:");
@@ -415,7 +415,7 @@ public class formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void asiento7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento7ActionPerformed
-       asiento = asiento + asiento1.getText() + " ";
+       asiento = asiento + asiento7.getText() + " ";
         if(color7 == true){
            pago = pago + 1;
             asiento7.setBackground(Color.red);
@@ -432,7 +432,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento7ActionPerformed
 
     private void asiento11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento11ActionPerformed
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento11.getText() + " ";
         
        if(color11 == true){
            pago = pago + 1;
@@ -455,6 +455,7 @@ public class formulario extends javax.swing.JFrame {
         asiento = asiento + asiento1.getText() + " ";
         
        if(color1 == true){
+           asiento = asiento + asiento1.getText() + " ";
            pago = pago + 1;
             asiento1.setBackground(Color.red);
             asiento1.setForeground(Color.white);
@@ -539,13 +540,18 @@ public class formulario extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
         
+        txtaHistorial.append("Asientos: " + asiento + "\r\nTotal a pagar: \r\n" + pago + "\r\n ---------------------------\r\n");
+       // txtaHistorial.setText(asiento);
+        //txtaHistorial.setText("Total a pagar: $" + pago);
+        //txtaHistorial.setText("----------------------------------");
         pago = 0;
         lblTotalPagar.setText("$0.0");
+        asiento = "";
     }//GEN-LAST:event_reservarActionPerformed
 
     private void asiento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento2ActionPerformed
        
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento2.getText() + " ";
         
        if(color2 == true){
            pago = pago + 1;
@@ -563,7 +569,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento2ActionPerformed
 
     private void asiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento3ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento3.getText() + " ";
         
        if(color3 == true){
            pago = pago + 1;
@@ -581,7 +587,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento3ActionPerformed
 
     private void asiento4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento4ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento4.getText() + " ";
         
        if(color4 == true){
            pago = pago + 1;
@@ -599,7 +605,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento4ActionPerformed
 
     private void asiento5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento5ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento5.getText() + " ";
         
        if(color5 == true){
            pago = pago + 1;
@@ -617,7 +623,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento5ActionPerformed
 
     private void asiento6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento6ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento6.getText() + " ";
         
        if(color6 == true){
            pago = pago + 1;
@@ -635,7 +641,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento6ActionPerformed
 
     private void asiento8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento8ActionPerformed
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento8.getText() + " ";
         
         if(color8 == true){
            pago = pago + 1;
@@ -654,7 +660,7 @@ public class formulario extends javax.swing.JFrame {
 
     private void asiento9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento9ActionPerformed
         
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento9.getText() + " ";
         if(color9 == true){
            pago = pago + 1;
             asiento9.setBackground(Color.red);
@@ -671,7 +677,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento9ActionPerformed
 
     private void asiento10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento10ActionPerformed
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento10.getText() + " ";
         
         if(color10 == true){
            pago = pago + 1;
@@ -689,7 +695,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento10ActionPerformed
 
     private void asiento12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento12ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento12.getText() + " ";
         
        if(color12 == true){
            pago = pago + 1;
@@ -707,7 +713,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento12ActionPerformed
 
     private void asiento13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento13ActionPerformed
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento13.getText() + " ";
         
        if(color13 == true){
            pago = pago + 1;
@@ -725,7 +731,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento13ActionPerformed
 
     private void asiento14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento14ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento14.getText() + " ";
         
        if(color14 == true){
            pago = pago + 1;
@@ -743,7 +749,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento14ActionPerformed
 
     private void asiento15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento15ActionPerformed
-         asiento = asiento + asiento1.getText() + " ";
+         asiento = asiento + asiento15.getText() + " ";
         
        if(color15 == true){
            pago = pago + 1;
@@ -761,7 +767,7 @@ public class formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_asiento15ActionPerformed
 
     private void asiento16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento16ActionPerformed
-        asiento = asiento + asiento1.getText() + " ";
+        asiento = asiento + asiento16.getText() + " ";
         
        if(color16 == true){
            pago = pago + 1;
@@ -837,12 +843,12 @@ public class formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblCaja;
     private javax.swing.JLabel lblCostoAsiento;
     private javax.swing.JLabel lblMensajeTotalaPagar;
     private javax.swing.JLabel lblTotalPagar;
     private javax.swing.JButton reservar;
     private javax.swing.JLabel tema;
+    private javax.swing.JTextArea txtaHistorial;
     // End of variables declaration//GEN-END:variables
 }
