@@ -455,7 +455,7 @@ public class formulario extends javax.swing.JFrame {
         asiento = asiento + asiento1.getText() + " ";
         
        if(color1 == true){
-           asiento = asiento + asiento1.getText() + " ";
+           
            pago = pago + 1;
             asiento1.setBackground(Color.red);
             asiento1.setForeground(Color.white);
@@ -540,7 +540,7 @@ public class formulario extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
         
-        txtaHistorial.append("Asientos: " + asiento + "\r\nTotal a pagar: \r\n" + pago + "\r\n ---------------------------\r\n");
+        txtaHistorial.append("Asientos: " + asiento + "\r\nTotal a pagar: \r\n$" + pago + "\r\n ---------------------------\r\n");
        // txtaHistorial.setText(asiento);
         //txtaHistorial.setText("Total a pagar: $" + pago);
         //txtaHistorial.setText("----------------------------------");
