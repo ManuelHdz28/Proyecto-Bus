@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public class formulario extends javax.swing.JFrame {
 
     boolean color1 = true, color2 = true, color3 = true, color4 = true, color5 = true, color6 = true, color7 = true, color8 = true, color9 = true, color10 = true, color11 = true, color12 = true, color13 = true, color14 = true, color15 = true, color16 = true;
-    
+    int validador = 0;
     double pago = 0, caja = 0;
     String asiento = "| ";
     
@@ -479,7 +479,7 @@ public class formulario extends javax.swing.JFrame {
 
     private void asiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento1ActionPerformed
       
-        asiento = asiento + asiento1.getText() + " | ";
+        
         
        if(color1 == true){
            
@@ -504,81 +504,103 @@ public class formulario extends javax.swing.JFrame {
         
         if(color1 == false){
             asiento1.setEnabled(false);
+            asiento = asiento + asiento1.getText() + " | ";
+            validador = validador + 1;
         }
         
         if(color2 == false){
+            asiento = asiento + asiento2.getText() + " | ";
             asiento2.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color3 == false){
+            
             asiento3.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color4 == false){
+            
             asiento4.setEnabled(false);
+            validador = validador + 1;
         }
         if(color5 == false){
             asiento5.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color6 == false){
             asiento6.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color7 == false){
             asiento7.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color8 == false){
             asiento8.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color9 == false){
             asiento9.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color10 == false){
             asiento10.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color11 == false){
             asiento11.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color12 == false){
             asiento12.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color13 == false){
             asiento13.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color14 == false){
             asiento14.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color15 == false){
             asiento15.setEnabled(false);
+            validador = validador + 1;
         }
         
         if(color16 == false){
             asiento16.setEnabled(false);
+            validador = validador + 1;
         }
         
-        JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
+        if(validador >0){
+         JOptionPane.showMessageDialog(null, "SE HAN RESERVADO LOS ASIENTOS");
+         txtaHistorial.append("Ticket de Compra\r\nAsientos Reservados: " + asiento + "\r\nTotal a pagar: $" + pago + "\r\n -------------------------------------\r\n");
+         pago = 0;
+         lblTotalPagar.setText("$0.0");
+         asiento = "| ";
+        }else{
+          JOptionPane.showMessageDialog(null, "SELECCIONE ALGUNO DE LOS ASIENTOS");
+        }
         
-        txtaHistorial.append("Asientos: " + asiento + "\r\nTotal a pagar: \r\n$" + pago + "\r\n ---------------------------\r\n");
-       // txtaHistorial.setText(asiento);
-        //txtaHistorial.setText("Total a pagar: $" + pago);
-        //txtaHistorial.setText("----------------------------------");
-        pago = 0;
-        lblTotalPagar.setText("$0.0");
-        asiento = "| ";
+        
     }//GEN-LAST:event_reservarActionPerformed
 
     private void asiento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asiento2ActionPerformed
        
-        asiento = asiento + asiento2.getText() + " | ";
+        
         
        if(color2 == true){
            pago = pago + 1;
