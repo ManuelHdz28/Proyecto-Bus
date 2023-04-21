@@ -18,7 +18,7 @@ public class formulario extends javax.swing.JFrame {
     int validador = 0;
     double pago = 0, caja = 0;
     String asiento = "| ";
-    
+     
     /**
      * Creates new form formulario
      */
@@ -503,6 +503,9 @@ public class formulario extends javax.swing.JFrame {
         lblCaja.setText(String.valueOf("$" + caja));
         //asiento = "| ";
         //validador = 0;
+        
+       
+        
         if(color1 == false){
             asiento1.setEnabled(false);
             asiento = asiento + asiento1.getText() + " | ";
