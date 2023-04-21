@@ -292,7 +292,7 @@ public class formulario extends javax.swing.JFrame {
         lblTotalPagar.setText("$0.0");
 
         lblCostoAsiento.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        lblCostoAsiento.setText("COSTO DE ASIENTO: $1.0");
+        lblCostoAsiento.setText("COSTO POR ASIENTO: $1.0");
 
         jLabel2.setText("Total de Caja:");
 
@@ -345,24 +345,6 @@ public class formulario extends javax.swing.JFrame {
                         .addComponent(asiento4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(lblCostoAsiento)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblCaja)
-                                .addGap(8, 8, 8))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(reservar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblMensajeTotalaPagar)
-                                    .addGap(26, 26, 26)
-                                    .addComponent(lblTotalPagar)))))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(81, 81, 81)
                         .addComponent(jLabel4)
                         .addGap(3, 3, 3)
@@ -371,12 +353,31 @@ public class formulario extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(4, 4, 4)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblCaja)
+                                .addGap(8, 8, 8))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1)
+                                .addComponent(lblCostoAsiento)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(lblMensajeTotalaPagar)
+                                    .addGap(26, 26, 26)
+                                    .addComponent(lblTotalPagar))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(118, 118, 118)
+                                    .addComponent(reservar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(31, 31, 31))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(tema)
-                .addGap(241, 241, 241))
+                .addGap(257, 257, 257))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
